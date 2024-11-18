@@ -4,6 +4,7 @@ export const Button = {
       bg: 'transparent',
       height: '56px',
       position: 'relative',
+      color: 'white',
       _after: {
         content: '""',
         position: 'absolute',
@@ -11,7 +12,7 @@ export const Button = {
         left: 0,
         width: '100%',
         height: '3.5px',
-        bg: 'blue.500',
+        bg: 'teal.500',
         opacity: 0, // Скрыто по умолчанию
         transition: 'opacity 0.3s', // Плавный переход
       },

@@ -13,8 +13,8 @@ const navBtns = [
 
 export const Header = () => {
   return (
-    <Flex flexDirection="column">
-      <Flex bg="#4faaff" height="58px" width="100%" alignItems="center">
+    <Flex zIndex={1} flexDirection="column" mb="-60px">
+      <Flex bg="teal.300" height="58px" width="100%" alignItems="center">
         <Flex flexGrow={1} justifyContent="center">
           <Text color="white" fontWeight="500" fontSize="15px">
             ОФИЦИАЛЬНЫЙ САЙТ СПОРТИВНОГО КЛУБА "ЛЕГЕНДА" ГОРОДА ТАГАНРОГА
