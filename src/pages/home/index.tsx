@@ -6,7 +6,7 @@ import { StartBlock } from './StartBlock';
 import { RunExperience } from './RunExperience';
 import { GetStartedForUsers } from './GetStartedForUsers';
 import { CommentsParticipants } from './CommentsParticipants/CommentsParticipants';
-import { Footer } from './Footer';
+import { Footer } from '../../components/Footer';
 import { SliderPhoto } from './SliderPhoto';
 
 export const HomePage = () => {
