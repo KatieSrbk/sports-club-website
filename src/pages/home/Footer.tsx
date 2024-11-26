@@ -11,6 +11,9 @@ export const Footer = () => {
         justifyContent="space-around"
         align="start"
       >
+        <Flex justifyContent="center" alignItems="center">
+          <Image src="icons/logo.svg" width="200px" height="200px" />
+        </Flex>
         {/* Ссылки на страницы */}
         <Box mb={{ base: 8, md: 0 }}>
           <Text fontSize="lg" fontWeight="bold" mb={4}>
