@@ -36,8 +36,10 @@ export const Header = () => {
         </Flex>
       </Flex>
       <Flex justifyContent="center">
-        {navBtns.map((item) => (
-          <Button variant="headerNav">{item.text}</Button>
+        {navBtns.map((item, index) => (
+          <Button key={index + item.text} variant="headerNav">
+            {item.text}
+          </Button>
         ))}
       </Flex>
     </Flex>
