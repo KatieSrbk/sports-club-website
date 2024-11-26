@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Link, Stack, Text } from '@chakra-ui/react';
 
 export const Footer = () => {
   return (

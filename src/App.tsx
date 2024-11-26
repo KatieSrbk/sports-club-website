@@ -2,7 +2,7 @@ import { ChakraBaseProvider, ChakraProvider } from '@chakra-ui/react'
 import theme from './styles/theme'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { HomePage } from './pages/home/HomePage'
+import { HomePage } from './pages/home'
 import { ErrorPage } from './pages/error/ErrorPage'
 import { PAGE_URL } from './utils/constants'
 
