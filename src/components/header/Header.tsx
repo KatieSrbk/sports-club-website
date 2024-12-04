@@ -1,4 +1,7 @@
 import { Button, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { useMediaQuery } from '@chakra-ui/react';
+import { WINDOW_SIZE } from '../../utils/constants';
+import { BurgerMenu } from './BurgerMenu';
 
 const navBtns = [
   { text: 'Картинка клуба' },
@@ -12,9 +15,12 @@ const navBtns = [
 ];
 
 export const Header = () => {
+  const [isTablet] = useMediaQuery(WINDOW_SIZE.TABLET);
+
   return (
     <Flex zIndex={1} flexDirection="column" mb="-60px">
       <Flex bg="teal.300" height="58px" width="100%" alignItems="center">
+        {!isTablet && <BurgerMenu navBtns={navBtns} />}
         <Flex flexGrow={1} justifyContent="center">
           <Text color="white" fontWeight="500" fontSize="15px">
             ОФИЦИАЛЬНЫЙ САЙТ СПОРТИВНОГО КЛУБА "ЛЕГЕНДА" ГОРОДА ТАГАНРОГА
@@ -35,13 +41,15 @@ export const Header = () => {
           </Link>
         </Flex>
       </Flex>
-      <Flex justifyContent="center">
-        {navBtns.map((item, index) => (
-          <Button key={index + item.text} variant="headerNav">
-            {item.text}
-          </Button>
-        ))}
-      </Flex>
+      {isTablet && (
+        <Flex justifyContent="center">
+          {navBtns.map((item, index) => (
+            <Button key={index + item.text} variant="headerNav">
+              {item.text}
+            </Button>
+          ))}
+        </Flex>
+      )}
     </Flex>
   );
 };

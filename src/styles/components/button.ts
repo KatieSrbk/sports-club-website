@@ -5,6 +5,8 @@ export const Button = {
       height: '56px',
       position: 'relative',
       color: 'white',
+      whiteSpace: 'normal',
+
       _after: {
         content: '""',
         position: 'absolute',

@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import { Header } from '../../components/Header';
+import { Header } from '../../components/header/Header';
 import { Trainer } from './Trainer';
 import { AboutClub } from './AboutClub';
 import { StartBlock } from './StartBlock';
