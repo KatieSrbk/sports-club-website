@@ -19,14 +19,28 @@ export const Header = () => {
 
   return (
     <Flex zIndex={1} flexDirection="column" mb="-60px">
-      <Flex bg="teal.300" height="58px" width="100%" alignItems="center">
+      <Flex
+        bg="teal.300"
+        height={['45px', '55px', '56px', '57px', '58px', '58px']}
+        width="100%"
+        alignItems="center"
+        textAlign="center"
+      >
         {!isTablet && <BurgerMenu navBtns={navBtns} />}
-        <Flex flexGrow={1} justifyContent="center">
-          <Text color="white" fontWeight="500" fontSize="15px">
-            ОФИЦИАЛЬНЫЙ САЙТ СПОРТИВНОГО КЛУБА "ЛЕГЕНДА" ГОРОДА ТАГАНРОГА
+        <Flex flexGrow={1} justifyContent="center" width="100px">
+          <Text
+            color="white"
+            fontWeight="500"
+            fontSize={['7px', '10px', '11px', '12px', '15px', '15px']}
+          >
+            ОФИЦИАЛЬНЫЙ САЙТ СПОРТИВНОГО КЛУБА "ЛЕГЕНДА" ГОРОДА&nbsp;ТАГАНРОГА
           </Text>
         </Flex>
-        <Flex gap="11px" width="140px" flexBasis="17%">
+        <Flex
+          mx={3}
+          gap="11px"
+          width={['90px', '100px', '110px', '120px', '140px', '140px']}
+        >
           <Link>
             <Image src="/icons/telegram.svg" alt="" />
           </Link>
