@@ -6,8 +6,7 @@ export const StartBlock = () => {
     <Box
       position="relative"
       width="100%" // Растянуть блок по ширине родителя
-      maxWidth="1270px"
-      height="700px"
+      height={{ base: '450px', sm: '600px', md: '700px' }}
       overflow="hidden"
     >
       <Image
@@ -35,17 +34,36 @@ export const StartBlock = () => {
         px={4}
       >
         <Text
-          fontSize="110px"
+          fontSize={{
+            base: '40px',
+            sm: '65px',
+            md: '80px',
+            lg: '90px',
+            xl: '100px',
+            '2xl': '120px',
+          }}
           fontFamily="fantasy"
           fontStyle="normal"
-          mt={10}
+          mt={16}
           lineHeight="1.1"
         >
-          Бегать гораздо веселее, когда Ты не один!
+          Бегать гораздо веселее, когда Ты&nbsp;не&nbsp;один!
         </Text>
-        <Text fontSize="xl" fontFamily="inherit" mt={9}>
+        <Text
+          fontSize={{
+            base: 'sm',
+            sm: 'md',
+            md: 'xl',
+            lg: 'xl',
+            xl: '22px',
+            '2xl': '28px',
+          }}
+          fontFamily="inherit"
+          mt={2}
+          px={{ base: 4, md: 8 }}
+        >
           Клуб любителей бега "Легенда" - это сообщество любителей бега в любом
-          месте. Мы поможем вам принять бег, а не бояться его.
+          месте. Мы поможем вам принять бег, а&nbsp;не&nbsp;бояться&nbsp;его.
         </Text>
         <Button
           variant="outline"
@@ -53,7 +71,7 @@ export const StartBlock = () => {
           borderRadius="none"
           color="teal.300"
           borderWidth="2px"
-          size="lg"
+          size={{ base: 'sm', sm: 'md', md: 'md', lg: 'lg' }}
           transition="all 0.3s"
           _hover={{
             bg: 'teal.300',

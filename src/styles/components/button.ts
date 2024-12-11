@@ -6,6 +6,12 @@ export const Button = {
       position: 'relative',
       color: 'white',
       whiteSpace: 'normal',
+      fontSize: {
+        md: '12px',
+        lg: '14px',
+        xl: '16px',
+        '2xl': '18px',
+      },
 
       _after: {
         content: '""',
