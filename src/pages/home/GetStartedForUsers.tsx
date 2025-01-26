@@ -4,31 +4,87 @@ import { RunningManIcon } from '../../styles/components/customIcons';
 export const GetStartedForUsers = () => {
   return (
     <Flex bg="#1b1c1e" color="white" flexDirection="column">
-      <Flex flexDirection="column" justifyContent="center" margin="30px">
+      <Flex
+        flexDirection="column"
+        justifyContent="center"
+        margin="30px"
+        textAlign="center"
+        pt={8}
+      >
         <Flex justifyContent="center">
-          <Heading>Присоединяйтесь и почувствуйте разницу</Heading>
+          <Heading
+            fontSize={{
+              base: '28px',
+              sm: '30x',
+              md: '34px',
+              lg: '36px',
+              xl: '40px',
+              '2xl': '42px',
+            }}
+          >
+            Присоединяйтесь и почувствуйте разницу
+          </Heading>
         </Flex>
-        <Flex
+        <Text
           mt={2}
-          fontSize="23px"
+          fontSize={{
+            base: '17px',
+            sm: '19px',
+            md: '20px',
+            lg: '21px',
+            xl: '22px',
+            '2xl': '24px',
+          }}
           fontWeight="700"
           color="#b6b8b6ef"
           justifyContent="center"
         >
-          <h4>Вот как начать:</h4>
-        </Flex>
-        <Flex flexDirection="row" justifyContent="space-around">
+          Вот как начать:
+        </Text>
+
+        <Flex
+          flexDirection={{
+            base: 'column',
+            sm: 'column',
+            md: 'row',
+            lg: 'row',
+            xl: 'row',
+            '2xl': 'row',
+          }}
+          justifyContent="space-around"
+          px={{
+            base: '20px',
+            sm: '50px',
+            md: '0',
+            lg: '20px',
+            xl: '50px',
+            '2xl': '200px',
+          }}
+        >
           <Flex alignItems="center" flexDirection="column" flexBasis="30%">
             <Flex
               position="relative"
-              height="230px"
+              height={{
+                base: '170px',
+                sm: '200px',
+                md: '210px',
+                lg: '220px',
+                xl: '230px',
+              }}
               width="100%"
               alignItems="center"
               justifyContent="center"
             >
               <Flex
                 color="#9c4b2f"
-                fontSize="180px"
+                fontSize={{
+                  base: '150px',
+                  sm: '170px',
+                  md: '175px',
+                  lg: '179px',
+                  xl: '180px',
+                  '2xl': '185px',
+                }}
                 fontFamily="fantasy"
                 width="100%"
                 justifyContent="center"
@@ -38,28 +94,58 @@ export const GetStartedForUsers = () => {
               </Flex>
               <Text
                 zIndex={1}
-                fontSize="40px"
+                fontSize={{
+                  base: '30px',
+                  sm: '32px',
+                  md: '34px',
+                  lg: '36px',
+                  xl: '38px',
+                  '2xl': '40px',
+                }}
                 fontFamily="initial"
                 fontWeight="700"
               >
                 Регистрация
               </Text>
             </Flex>
-            <Text fontSize="20px">
+            <Text
+              fontSize={{
+                base: '12px',
+                sm: '15px',
+                md: '15px',
+                lg: '18px',
+                xl: '19px',
+                '2xl': '20px',
+              }}
+              maxW={500}
+            >
               Станьте членом клуба "Легенда" уже сегодня.
             </Text>
           </Flex>
           <Flex alignItems="center" flexDirection="column" flexBasis="30%">
             <Flex
               position="relative"
-              height="230px"
+              height={{
+                base: '170px',
+                sm: '200px',
+                md: '210px',
+                lg: '220px',
+                xl: '230px',
+              }}
               width="100%"
               alignItems="center"
               justifyContent="center"
             >
               <Flex
                 color="#9c4b2f"
-                fontSize="180px"
+                fontSize={{
+                  base: '150px',
+                  sm: '170px',
+                  md: '175px',
+                  lg: '179px',
+                  xl: '180px',
+                  '2xl': '185px',
+                }}
                 fontFamily="fantasy"
                 width="100%"
                 justifyContent="center"
@@ -69,14 +155,31 @@ export const GetStartedForUsers = () => {
               </Flex>
               <Text
                 zIndex={1}
-                fontSize="40px"
+                fontSize={{
+                  base: '30px',
+                  sm: '35px',
+                  md: '35px',
+                  lg: '37px',
+                  xl: '38px',
+                  '2xl': '40px',
+                }}
                 fontFamily="initial"
                 fontWeight="700"
               >
                 Подбор тренировок
               </Text>
             </Flex>
-            <Text fontSize="20px">
+            <Text
+              fontSize={{
+                base: '12px',
+                sm: '15px',
+                md: '15px',
+                lg: '18px',
+                xl: '19px',
+                '2xl': '20px',
+              }}
+              maxW={500}
+            >
               При общении с тренером обговарием свои особенности.Выбираем
               программу
             </Text>
@@ -84,14 +187,27 @@ export const GetStartedForUsers = () => {
           <Flex alignItems="center" flexDirection="column" flexBasis="30%">
             <Flex
               position="relative"
-              height="230px"
+              height={{
+                base: '170px',
+                sm: '200px',
+                md: '210px',
+                lg: '220px',
+                xl: '230px',
+              }}
               width="100%"
               alignItems="center"
               justifyContent="center"
             >
               <Flex
                 color="#9c4b2f"
-                fontSize="180px"
+                fontSize={{
+                  base: '150px',
+                  sm: '170px',
+                  md: '175px',
+                  lg: '179px',
+                  xl: '180px',
+                  '2xl': '185px',
+                }}
                 fontFamily="fantasy"
                 width="100%"
                 justifyContent="center"
@@ -101,31 +217,51 @@ export const GetStartedForUsers = () => {
               </Flex>
               <Text
                 zIndex={1}
-                fontSize="40px"
+                fontSize={{
+                  base: '30px',
+                  sm: '35px',
+                  md: '35px',
+                  lg: '37px',
+                  xl: '38px',
+                  '2xl': '40px',
+                }}
                 fontFamily="initial"
                 fontWeight="700"
               >
                 Бегаем вместе
               </Text>
             </Flex>
-            <Text fontSize="20px">
+            <Text
+              fontSize={{
+                base: '12px',
+                sm: '15px',
+                md: '15px',
+                lg: '18px',
+                xl: '19px',
+                '2xl': '20px',
+              }}
+              maxW={500}
+            >
               Присоединяйтесь к нашему международному сообществу бегунов,
               которые ставят усилия выше скорости. Достигайте своих целей в беге
               в благоприятной среде.
             </Text>
           </Flex>
         </Flex>
-        <Flex mt={12} mb={3} justifyContent="center">
+        <Flex
+          mt={{ base: 6, sm: 8, md: 8, lg: 10, xl: 12 }}
+          mb={3}
+          justifyContent="center"
+        >
           <Button
             bg="orange.600"
-            width="250px"
             borderRadius="none"
             color="white"
-            size="md"
+            size={{ base: 'sm', sm: 'md', md: 'md', lg: 'md', xl: 'lg' }}
             //   transition="all 0.3s"
             _hover={{
               bg: 'green',
-              color: 'white', // Цвет текста, совпадающий с фоном
+              color: 'white',
               svg: {
                 fill: 'white',
               },
