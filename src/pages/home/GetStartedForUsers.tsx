@@ -58,7 +58,7 @@ export const GetStartedForUsers = () => {
             md: '0',
             lg: '20px',
             xl: '50px',
-            '2xl': '200px',
+            '2xl': '290px',
           }}
         >
           <Flex alignItems="center" flexDirection="column" flexBasis="30%">
@@ -70,6 +70,7 @@ export const GetStartedForUsers = () => {
                 md: '210px',
                 lg: '220px',
                 xl: '230px',
+                '2xl': '260px'
               }}
               width="100%"
               alignItems="center"
@@ -83,7 +84,7 @@ export const GetStartedForUsers = () => {
                   md: '175px',
                   lg: '179px',
                   xl: '180px',
-                  '2xl': '185px',
+                  '2xl': '200px',
                 }}
                 fontFamily="fantasy"
                 width="100%"
@@ -115,7 +116,7 @@ export const GetStartedForUsers = () => {
                 md: '15px',
                 lg: '18px',
                 xl: '19px',
-                '2xl': '20px',
+                '2xl': '23px',
               }}
               maxW={500}
             >
@@ -131,6 +132,7 @@ export const GetStartedForUsers = () => {
                 md: '210px',
                 lg: '220px',
                 xl: '230px',
+                '2xl': '260px'
               }}
               width="100%"
               alignItems="center"
@@ -144,7 +146,7 @@ export const GetStartedForUsers = () => {
                   md: '175px',
                   lg: '179px',
                   xl: '180px',
-                  '2xl': '185px',
+                  '2xl': '200px',
                 }}
                 fontFamily="fantasy"
                 width="100%"
@@ -176,12 +178,12 @@ export const GetStartedForUsers = () => {
                 md: '15px',
                 lg: '18px',
                 xl: '19px',
-                '2xl': '20px',
+                '2xl': '23px',
               }}
               maxW={500}
             >
-              При общении с тренером обговарием свои особенности.Выбираем
-              программу
+              Выберем
+              программу, которая подойдет именно вам.
             </Text>
           </Flex>
           <Flex alignItems="center" flexDirection="column" flexBasis="30%">
@@ -193,6 +195,7 @@ export const GetStartedForUsers = () => {
                 md: '210px',
                 lg: '220px',
                 xl: '230px',
+                '2xl': '260px'
               }}
               width="100%"
               alignItems="center"
@@ -206,7 +209,7 @@ export const GetStartedForUsers = () => {
                   md: '175px',
                   lg: '179px',
                   xl: '180px',
-                  '2xl': '185px',
+                  '2xl': '200px',
                 }}
                 fontFamily="fantasy"
                 width="100%"
@@ -238,12 +241,11 @@ export const GetStartedForUsers = () => {
                 md: '15px',
                 lg: '18px',
                 xl: '19px',
-                '2xl': '20px',
+                '2xl': '23px',
               }}
               maxW={500}
             >
-              Присоединяйтесь к нашему международному сообществу бегунов,
-              которые ставят усилия выше скорости. Достигайте своих целей в беге
+              Достигайте своих целей
               в благоприятной среде.
             </Text>
           </Flex>
