@@ -1,6 +1,44 @@
-import { Box, Flex, Image, Link, Stack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Input,
+  Link,
+  Stack,
+  Text,
+  useToast,
+} from '@chakra-ui/react';
+import { useState } from 'react';
 
 export const Footer = () => {
+  const [email, setEmail] = useState('');
+  const toast = useToast();
+
+  const handleSubscribe = (event: any) => {
+    event.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Регулярное выражение для валидации email
+
+    if (emailRegex.test(email)) {
+      toast({
+        title: 'Успешно',
+        description: 'Вы подписались на рассылку!',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
+      setEmail(''); // Очищаем поле после успешной подписки
+    } else {
+      toast({
+        title: 'Ошибка',
+        description: 'Введите корректный email',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <Box as="footer" bg="gray.900" color="white" py={8}>
       <Flex
@@ -14,6 +52,33 @@ export const Footer = () => {
         <Flex justifyContent="center" alignItems="center">
           <Image src="icons/logo.svg" width="200px" height="200px" />
         </Flex>
+
+        {/* Форма подписки */}
+        <Box textAlign="center" mb={{ base: 8, md: 0 }}>
+          <Text fontSize="lg" fontWeight="bold" mb={4}>
+            Подпишитесь на новости
+          </Text>
+          <Flex
+            as="form"
+            onSubmit={handleSubscribe}
+            direction={{ base: 'column', md: 'row' }}
+            gap={2}
+          >
+            <Input
+              placeholder="Введите ваш email"
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              bg="gray.800"
+              color="white"
+              _placeholder={{ color: 'gray.400' }}
+            />
+            <Button type="submit" colorScheme="blue" px={6}>
+              Подписаться
+            </Button>
+          </Flex>
+        </Box>
+
         {/* Ссылки на страницы */}
         <Box mb={{ base: 8, md: 0 }}>
           <Text fontSize="lg" fontWeight="bold" mb={4}>
