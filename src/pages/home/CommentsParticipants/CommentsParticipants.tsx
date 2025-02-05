@@ -3,24 +3,37 @@ import { Comment } from './components/Comment';
 
 export const CommentsParticipants = () => {
   return (
-    <Flex border="1px solid red">
-      <Flex mb={20} flexDirection="column" width="100%">
+    <Flex>
+      <Flex mb={20} flexDirection="column" width="100%" alignItems="center">
         <Flex
           alignItems="center"
           flexDirection="column"
-          justifyContent="space-evenly"
           width="100%"
-          height="100px"
-          mt={7}
+          pt={7}
+          px={8}
+          textAlign="center"
         >
-          <Text color="grey" fontSize="14px" fontWeight="300">
+          <Text
+            color="grey"
+            fontSize={{ base: '12px', sm: '14px', md: '16px', lg: '18px' }}
+            fontWeight="300"
+          >
             ТРЕНЕРУЙТЕСЬ И ПОВЫШАЙТЕ СВОЮ ПРОИЗВОДИТЕЛЬНОСТЬ
           </Text>
-          <Text fontSize="38px" fontWeight="bold" fontFamily="fantasy">
+          <Text
+            fontSize={{ base: '24px', sm: '28px', md: '34px', lg: '40px' }}
+            fontWeight="bold"
+            fontFamily="fantasy"
+          >
             ОТЗЫВЫ НАШИХ УЧАСТНИКОВ
           </Text>
         </Flex>
-        <Flex flexDirection="column">
+        <Flex
+          flexDirection="column"
+          width="100%"
+          alignItems="center"
+          px={{ base: '15px', sm: '30px', md: '50px', lg: '80px' }}
+        >
           <Comment
             isStartPosition={true}
             imagePath="./images/tr2.jpg"

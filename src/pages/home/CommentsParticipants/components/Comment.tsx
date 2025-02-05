@@ -15,35 +15,68 @@ export const Comment: React.FC<Props> = ({
 }) => {
   return (
     <Flex
-      mt={10}
-      ml={isStartPosition ? 24 : 0}
-      mr={isStartPosition ? 0 : 16}
+      pt={10}
+      pl={isStartPosition ? { base: 0, sm: 0, md: 0, lg: 10 } : 0}
+      pr={isStartPosition ? 0 : { base: 0, sm: 0, md: 0, lg: 32 }}
       justifyContent={isStartPosition ? 'flex-start' : 'flex-end'}
+      flexDirection={{ base: 'column', sm: 'column', md: 'row' }}
+      alignItems="center"
+      width="100%"
     >
       <Image
-        height="220px"
+        height={{
+          base: '120px',
+          sm: '120x',
+          md: '150px',
+          lg: '180px',
+          xl: '220px',
+          '2xl': '220px',
+        }}
         objectFit="cover"
         borderRadius="50%"
         border="2px solid white"
         boxShadow=" 0 0 20px rgba(0, 0, 0, 0.5)"
         src={imagePath}
+        display="flex"
       ></Image>
-      <Flex ml={10} justifyContent="center" flexDirection="column">
-        <Text mb={1} fontSize="20px" fontWeight="500" fontFamily="inherit">
+      <Flex
+        ml={
+          isStartPosition
+            ? { base: 0, sm: 0, md: 16 }
+            : { base: 0, sm: 0, md: 16 }
+        }
+        justifyContent="center"
+        flexDirection="column"
+        width="auto"
+      >
+        <Text
+          py={2}
+          fontSize={{
+            base: '17px',
+            sm: '17px',
+            md: '17px',
+            lg: '18px',
+            xl: '20px',
+            '2xl': '20px',
+          }}
+          fontWeight="500"
+          textAlign={{ base: 'center', sm: 'center', md: 'start' }}
+        >
           {participantName}
         </Text>
         <Flex
-          borderRadius="0 20px 20px 20px"
+          as={Text}
+          borderRadius={{ base: '20px 20px 20px 20px', md: '0 20px 20px 20px' }}
           border="#e3dacf 1px solid"
-          width="650px"
-          height="100px"
+          maxW={{ base: '300px', sm: '500px', md: '650px' }}
+          height="auto"
           bg="#fffbf6"
           justifyContent="flex-start"
           alignItems="center"
+          px={5}
+          py={3}
         >
-          <Text ml={5} fontFamily="inherit">
-            {participantText}
-          </Text>
+          {participantText}
         </Flex>
       </Flex>
     </Flex>

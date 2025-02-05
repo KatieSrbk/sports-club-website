@@ -8,10 +8,16 @@ export const Container = {
 
       '.Slider': {
         width: '100%',
+
+        '.flickity-button': {
+          _focus: {
+            boxShadow: 'none',
+          },
+        },
       },
 
       '.Plate': {
-        width: '350px',
+        width: ['170px', '230px', '300px', '310px', '310px', '350px'],
         margin: '0 16px',
         background: 'white',
         height: 'auto',
@@ -31,7 +37,7 @@ export const Container = {
 
       '.Plate img': {
         width: '100%',
-        height: '280px',
+        height: ['120px', '160px', '220px', '240px', '240px', '280px'],
         objectFit: 'cover',
       },
 
