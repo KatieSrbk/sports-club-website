@@ -18,7 +18,11 @@ export const Header = () => {
   const [isTablet] = useMediaQuery(WINDOW_SIZE.TABLET);
 
   return (
-    <Flex zIndex={1} flexDirection="column" mb="-60px">
+    <Flex
+      zIndex={1}
+      flexDirection="column"
+      mb={{ base: 0, sm: 0, md: '-60px' }}
+    >
       <Flex
         bg="teal.300"
         height={['45px', '55px', '56px', '57px', '58px', '58px']}

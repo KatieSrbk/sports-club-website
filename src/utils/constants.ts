@@ -1,6 +1,7 @@
 const PAGE_URL = {
   ERROR: 'error',
   HOME: '/',
+  ABOUT_US: 'about-us',
 };
 
 const WINDOW_SIZE = {
