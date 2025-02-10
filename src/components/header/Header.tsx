@@ -1,12 +1,13 @@
 import { Button, Flex, Image, Link, Text } from '@chakra-ui/react';
 import { useMediaQuery } from '@chakra-ui/react';
-import { WINDOW_SIZE } from '../../utils/constants';
+import { PAGE_URL, WINDOW_SIZE } from '../../utils/constants';
 import { BurgerMenu } from './BurgerMenu';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const navBtns = [
   { text: 'Картинка клуба' },
-  { text: 'Home' },
-  { text: 'About Us' },
+  { text: 'Главная', link: PAGE_URL.HOME },
+  { text: 'О нас', link: PAGE_URL.ABOUT_US },
   { text: 'Тренировочный план' },
   { text: 'Соревнования' },
   { text: 'Мерч' },
@@ -16,6 +17,14 @@ const navBtns = [
 
 export const Header = () => {
   const [isTablet] = useMediaQuery(WINDOW_SIZE.TABLET);
+  const location = useLocation(); // Получаем текущий путь
+  const navigate = useNavigate(); // Хук для программного перехода
+
+  const handleNavigation = (path: string) => {
+    if (path && location.pathname !== path) {
+      navigate(path);
+    }
+  };
 
   return (
     <Flex
@@ -62,7 +71,11 @@ export const Header = () => {
       {isTablet && (
         <Flex justifyContent="center">
           {navBtns.map((item, index) => (
-            <Button key={index + item.text} variant="headerNav">
+            <Button
+              key={index + item.text}
+              variant="headerNav"
+              onClick={() => handleNavigation(item.link || '#')}
+            >
               {item.text}
             </Button>
           ))}
